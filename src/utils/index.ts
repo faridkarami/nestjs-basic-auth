@@ -1,1 +1,1 @@
-export * from './test.util';
+export * from './auth.util';
