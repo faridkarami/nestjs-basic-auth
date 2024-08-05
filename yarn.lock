@@ -3893,7 +3893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nestjs-basic-auth@npm:^0.0.7, nestjs-basic-auth@workspace:.":
+"nestjs-basic-auth@workspace:.":
   version: 0.0.0-use.local
   resolution: "nestjs-basic-auth@workspace:."
   dependencies:
@@ -3905,7 +3905,6 @@ __metadata:
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.2.1"
     jest: "npm:^29.7.0"
-    nestjs-basic-auth: "npm:^0.0.7"
     prettier: "npm:^3.3.3"
     rimraf: "npm:^6.0.1"
     ts-jest: "npm:^29.2.3"

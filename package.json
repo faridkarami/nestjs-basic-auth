@@ -1,6 +1,6 @@
 {
   "name": "nestjs-basic-auth",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "HTTP basic auth middleware for NestJS",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -50,8 +50,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "nestjs-basic-auth": "^0.0.7"
   }
 }
