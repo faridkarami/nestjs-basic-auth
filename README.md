@@ -50,7 +50,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.use(
-    ['docs'],
+    ['/docs'],
     basicAuth({
       challenge: true,
       users: { admin: 'password' },
