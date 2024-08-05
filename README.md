@@ -44,13 +44,14 @@ The module exports a function that, when called with an options object, returns 
 ```js
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { basicAuth } from 'nestjs-basic-auth';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.use(
     ['docs'],
-    auth({
+    basicAuth({
       challenge: true,
       users: { admin: 'password' },
     }),
