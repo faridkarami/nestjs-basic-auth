@@ -1,7 +1,7 @@
 <p align="center">
     <br/>
     <a align="center" href="https://github.com/faridkarami/nestjs-basic-auth" target="_blank">
-        <img width="96px" src="https://raw.githubusercontent.com/faridkarami/nestjs-basic-auth/main/docs/img/logo.ico" />
+        <img width="96px" src="https://raw.githubusercontent.com/faridkarami/nestjs-basic-auth/main/docs/img/logo.png" />
     </a>
 </p>
 <h3 align="center">NestJS Basic Auth</h3>
