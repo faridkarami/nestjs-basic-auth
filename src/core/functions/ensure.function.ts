@@ -1,7 +1,7 @@
-export const ensure = <T>(
+export function ensure<T>(
   option: T | undefined,
   defaultValue?: T,
-): (() => T) => {
+): (req?: any) => T {
   if (option === undefined) {
     return () => defaultValue as T;
   }
@@ -10,5 +10,5 @@ export const ensure = <T>(
     return () => option;
   }
 
-  return option as () => T;
-};
+  return option as (req?: any) => T;
+}

@@ -1,8 +1,12 @@
 {
   "name": "nestjs-basic-auth",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "HTTP basic auth middleware for NestJS",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
@@ -30,6 +34,8 @@
     "url": "https://github.com/faridkarami/nestjs-basic-auth/issues"
   },
   "devDependencies": {
+    "@nestjs/platform-express": "^10.3.10",
+    "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.0.0",
     "eslint": "^9.8.0",
@@ -41,5 +47,8 @@
     "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
