@@ -36,3 +36,27 @@ or
 ```shell
 yarn add nestjs-basic-auth
 ```
+
+## Example
+
+The module exports a function that, when called with an options object, returns the middleware.
+
+```js
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  app.use(
+    ['docs'],
+    auth({
+      challenge: true,
+      users: { admin: 'password' },
+    }),
+  );
+
+  await app.listen(3000);
+}
+bootstrap();
+```

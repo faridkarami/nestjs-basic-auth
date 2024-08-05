@@ -2,7 +2,7 @@
   "name": "nestjs-basic-auth",
   "version": "0.0.0",
   "description": "HTTP basic auth middleware for NestJS",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
