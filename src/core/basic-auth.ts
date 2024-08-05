@@ -1,7 +1,7 @@
 import assert from 'assert';
 import { compare, ensure } from './functions';
 import { IOption } from './option.interface';
-import { auth } from 'src/utils';
+import { auth } from '../utils';
 
 export const basicAuth = (option: IOption) => {
   const challenge = option.challenge !== undefined ? !!option.challenge : false;
