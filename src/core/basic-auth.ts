@@ -1,4 +1,3 @@
-import assert from 'assert';
 import { compare, ensure } from './functions';
 import { IOption } from './option.interface';
 import { auth } from '../utils';
@@ -12,18 +11,21 @@ export const basicAuth = (option: IOption) => {
   const getResponseBody = ensure(option.unauthorizedResponse, '');
   const realm = ensure(option.realm);
 
-  assert(
-    typeof users === 'object',
-    'Expected an object for the basic auth users, found ' +
-      typeof users +
-      ' instead',
-  );
-  assert(
-    typeof authorizer === 'function',
-    'Expected a function for the basic auth authorizer, found ' +
-      typeof authorizer +
-      ' instead',
-  );
+  if (typeof users !== 'object') {
+    throw new TypeError(
+      'Expected an object for the basic auth users, found ' +
+        typeof users +
+        ' instead',
+    );
+  }
+
+  if (typeof authorizer !== 'function') {
+    throw new TypeError(
+      'Expected a function for the basic auth authorizer, found ' +
+        typeof authorizer +
+        ' instead',
+    );
+  }
 
   function staticUsersAuthorizer(username: string, password: string): boolean {
     for (const i in users) {
@@ -86,7 +88,9 @@ export const basicAuth = (option: IOption) => {
     }
 
     function authorizerCallback(err: Error | null, approved: boolean) {
-      assert.ifError(err);
+      if (err) {
+        throw err;
+      }
 
       if (approved) {
         return next();
